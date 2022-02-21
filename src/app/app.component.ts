@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+  dtOptions: any = {};
+
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      dom: 'Bfrtip',
+      buttons: [
+        // 'columnsToggle',
+        // 'colvis',
+        'copy',
+        'print',
+        'excel'
+      ]
+    }
+  }
 }
