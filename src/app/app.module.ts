@@ -7,7 +7,15 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTreeModule } from '@angular/material/tree';
 
 import { DataTablesModule } from "angular-datatables";
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
@@ -20,7 +28,7 @@ import { DashboardViewComponent } from './dashboard-view/dashboard-view.componen
     HeroesComponent,
     HeroDetailComponent,
     TableViewComponent,
-    DashboardViewComponent
+    DashboardViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,15 @@ import { DashboardViewComponent } from './dashboard-view/dashboard-view.componen
     DataTablesModule,
 
     // Material UI
-    MatCardModule
+    MatGridListModule,
+    MatButtonModule,
+    MatCardModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatIconModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

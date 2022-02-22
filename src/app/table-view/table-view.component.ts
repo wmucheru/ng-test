@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Transaction } from './transaction';
 import { TRANSACTIONS } from './mock-transactions';
 
 @Component({
@@ -9,6 +8,7 @@ import { TRANSACTIONS } from './mock-transactions';
   styleUrls: ['./table-view.component.css']
 })
 export class TableViewComponent implements OnInit {
+  title = 'Table View';
   dtOptions: any = {};
   transactions = TRANSACTIONS;
 

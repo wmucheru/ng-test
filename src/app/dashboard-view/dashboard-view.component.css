@@ -1,0 +1,32 @@
+.dashboard-toolbar{
+    display:flex;
+}
+
+.nav-spacer{
+    flex: 1 1 auto;
+}
+
+.dashboard-container{
+    background:#F5F5F5;
+    min-height:90vh;
+}
+
+.dashboard-sidebar, .dashboard-content{
+
+}
+
+.dashboard-sidebar {
+    width:240px;
+}
+
+.menu-tree-invisible{
+    display: none;
+}
+
+.dashboard-content{
+    padding:1em;
+}
+
+.graph-card{
+    margin-bottom:2em;
+}

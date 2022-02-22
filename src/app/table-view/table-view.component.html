@@ -1,32 +1,34 @@
-<table *ngIf="transactions" datatable [dtOptions]="dtOptions" class="row-border hover">
-    <thead>
-        <tr>
-            <th>Transaction ID</th>
-            <th>Created By</th>
-            <th>Source</th>
-            <th>Channel</th>
-            <th>Network</th>
-            <th>Amount (GHS)</th>
-            <th>Date</th>
-            <th>Network Ref.</th>
-            <th>Narration</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let trx of transactions">
-            <td>{{trx.id}}</td>
-            <td>{{trx.customer}}</td>
-            <td>{{trx.source}}</td>
-            <td>{{trx.channel}}</td>
-            <td>{{trx.network}}</td>
-            <td>{{trx.amount | number : '1.0-2'}}</td>
-            <td>{{trx.dateCreated}}</td>
-            <td>{{trx.netRef}}</td>
-            <td>{{trx.narration}}</td>
-            <td>
-                <span class="label label-{{trx.status | lowercase }}">{{trx.status}}</span>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="page-content">
+    <table *ngIf="transactions" datatable [dtOptions]="dtOptions" class="row-border hover">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Created By</th>
+                <th>Source</th>
+                <th>Channel</th>
+                <th>Network</th>
+                <th>Amount (GHS)</th>
+                <th>Date</th>
+                <th>Network Ref.</th>
+                <th>Narration</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let trx of transactions">
+                <td>{{trx.id}}</td>
+                <td>{{trx.customer}}</td>
+                <td>{{trx.source}}</td>
+                <td>{{trx.channel}}</td>
+                <td>{{trx.network}}</td>
+                <td>{{trx.amount | number : '1.0-2'}}</td>
+                <td>{{trx.dateCreated}}</td>
+                <td>{{trx.netRef}}</td>
+                <td>{{trx.narration}}</td>
+                <td>
+                    <span class="label label-{{trx.status | lowercase }}">{{trx.status}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
