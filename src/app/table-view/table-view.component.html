@@ -20,7 +20,7 @@
             <td>{{trx.source}}</td>
             <td>{{trx.channel}}</td>
             <td>{{trx.network}}</td>
-            <td>{{trx.amount}}</td>
+            <td>{{trx.amount | number : '1.0-2'}}</td>
             <td>{{trx.dateCreated}}</td>
             <td>{{trx.netRef}}</td>
             <td>{{trx.narration}}</td>
