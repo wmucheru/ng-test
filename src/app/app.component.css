@@ -1,0 +1,32 @@
+.app-nav{
+    display:block;
+    border-bottom:1px solid #ddd;
+    clear:both;
+    width:100%;
+}
+
+.app-logo img {
+    margin-right:1em;
+    max-width: 8em;
+}
+
+.app-nav a{
+    color:#000;
+    display:inline-block;
+    font-weight: bold;
+    margin-left:1em;
+    padding:0.6em 0 0;
+    text-decoration: none;
+}
+.app-nav a:hover {
+    color:#00aeea;
+}
+
+.app-nav a:not(.app-logo){
+    position:relative;
+    top:-0.7em;
+}
+
+.page-content{
+    padding:1em;
+}

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeroesComponent } from './heroes/heroes.component';
 import { TableViewComponent } from './table-view/table-view.component';
+import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 
 const routes: Routes = [
   {
     path: 'table-view',
-    component: HeroesComponent
+    component: TableViewComponent
   },
   {
     path: 'dashboard-view',
-    component: TableViewComponent
+    component: DashboardViewComponent
   }
 ];
 

@@ -1,3 +1,11 @@
-<h1>{{ title }}</h1>
-<app-heroes></app-heroes>
+<nav class="app-nav">
+    <a routerLink="/" class="app-logo">
+        <img src="/assets/img/app-logo.png" />
+    </a>
+    <a routerLink="/table-view">Table View</a>
+    <a routerLink="/dashboard-view">Dashboard View</a>
+</nav>
 
+<div class="page-content">
+    <router-outlet></router-outlet>
+</div>
