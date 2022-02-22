@@ -77,11 +77,13 @@ const MENU_TREE: MenuNode[] = [
 export class DashboardViewComponent implements OnInit {
   treeControl = new NestedTreeControl<MenuNode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<MenuNode>();
+  
 
   constructor() { }
 
   ngOnInit(): void {
     this.dataSource.data = MENU_TREE;
+    console.log(this.treeControl);
   }
 
   hasChild = (_: number, node: MenuNode) => !!node.children && node.children.length > 0;

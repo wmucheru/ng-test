@@ -1,44 +1,55 @@
 <mat-toolbar-row class="dashboard-toolbar">
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Language menu">
-        <span>Business Name</span> <mat-icon>expand_more</mat-icon>
+    <button mat-icon-button [matMenuTriggerFor]="bizMenu" aria-label="Language menu" class="business-name">
+        <span class="badge">BN</span> 
+        <span>Business Name</span> 
+        <span class="nav-spacer"></span>
+        <mat-icon>expand_more</mat-icon>
     </button>
-    <mat-menu #menu="matMenu">
+    <mat-menu #bizMenu="matMenu">
         <button mat-menu-item>
             <span>Other Business</span>
         </button>
     </mat-menu>
     
-    <span>May 18, 2021 15:42</span>
+    <span class="toolbar-time">May 18, 2021 15:42</span>
     <span class="nav-spacer"></span>
 
-    <span>
+    <span class="toolbar-item go-live">
         <mat-slide-toggle>Go Live</mat-slide-toggle>
     </span>
 
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Language menu">
-        <span>ENG</span> <mat-icon>arrow_drop_down</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>FRA</button>
-        <button mat-menu-item>SWA</button>
-    </mat-menu>
+    <span class="toolbar-item">
+        <button mat-icon-button [matMenuTriggerFor]="langMenu" aria-label="Language menu">
+            <span>ENG</span> <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #langMenu="matMenu">
+            <button mat-menu-item>FRA</button>
+            <button mat-menu-item>SWA</button>
+        </mat-menu>
+    </span>
 
-    <button mat-icon-button aria-label="Notification button">
-        <mat-icon>notifications</mat-icon>
-    </button>
+    <span class="toolbar-item tool-notify">
+        <button mat-icon-button aria-label="Notification button">
+            <mat-icon>notifications</mat-icon>
+        </button>
+    </span>
 
-    <button mat-button [matMenuTriggerFor]="menu">
-        <span>Edward Maina</span> <mat-icon>expand_more</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>My Account</button>
-        <button mat-menu-item>Sign Out</button>
-    </mat-menu>
+    <span class="toolbar-item">
+        <button mat-button [matMenuTriggerFor]="accountMenu">
+            <span>Edward Maina</span> <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #accountMenu="matMenu">
+            <button mat-menu-item>My Account</button>
+            <button mat-menu-item>Sign Out</button>
+        </mat-menu>
+    </span>
 </mat-toolbar-row>
 
 <mat-sidenav-container class="dashboard-container">
     <mat-sidenav #sidenav mode="side" opened class="dashboard-sidebar">
-        <span>Get started</span>
+        <div class="get-started">
+            <mat-icon>speed</mat-icon> Get started
+        </div>
 
         <div class="tree-label">MY BUSINESS</div>
 
@@ -61,7 +72,8 @@
                     </button>
                 </div>
 
-                <div [class.menu-tree-invisible]="!treeControl.isExpanded(node)" role="group">
+                <div [class.menu-tree-invisible]="!treeControl.isExpanded(node)"
+                    class="mat-subtree" role="group">
                     <ng-container matTreeNodeOutlet></ng-container>
                 </div>
             </mat-nested-tree-node>
@@ -89,29 +101,37 @@
 
         <mat-grid-list cols="4" class="summary-grid">
             <mat-grid-tile>
-                <mat-card class="summary-card">
-                    <mat-card-subtitle>Total Payment Request</mat-card-subtitle>
+                <mat-card class="summary-card card-payment">
+                    <mat-card-subtitle>
+                        <mat-icon>pie_chart</mat-icon> Total Payment Request
+                    </mat-card-subtitle>
                     <mat-card-content>1,000</mat-card-content>
                 </mat-card>
             </mat-grid-tile>
 
             <mat-grid-tile>
-                <mat-card class="summary-card">
-                    <mat-card-subtitle>Total Charge Requests</mat-card-subtitle>
+                <mat-card class="summary-card card-charge">
+                    <mat-card-subtitle>
+                        <mat-icon>pending_actions</mat-icon> Total Charge Requests
+                    </mat-card-subtitle>
                     <mat-card-content>1,000</mat-card-content>
                 </mat-card>
             </mat-grid-tile>
 
             <mat-grid-tile>
-                <mat-card class="summary-card">
-                    <mat-card-subtitle>Acceptance Rate</mat-card-subtitle>
+                <mat-card class="summary-card card-acceptance">
+                    <mat-card-subtitle>
+                        <mat-icon>verified</mat-icon> Acceptance Rate
+                    </mat-card-subtitle>
                     <mat-card-content>10%</mat-card-content>
                 </mat-card>
             </mat-grid-tile>
 
             <mat-grid-tile>
-                <mat-card class="summary-card">
-                    <mat-card-subtitle>Success Rate</mat-card-subtitle>
+                <mat-card class="summary-card card-success">
+                    <mat-card-subtitle>
+                        <mat-icon>pending_actions</mat-icon> Success Rate
+                    </mat-card-subtitle>
                     <mat-card-content>20</mat-card-content>
                 </mat-card>
             </mat-grid-tile>

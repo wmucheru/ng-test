@@ -1,9 +1,59 @@
-.dashboard-toolbar{
+.dashboard-toolbar {
+    align-items:center;
     display:flex;
+    height:auto;
+    padding:0.5em 0;
 }
 
 .nav-spacer{
     flex: 1 1 auto;
+}
+
+.business-name{
+    display:flex;
+    flex:1;
+    font-weight:normal;
+    padding:0 1em;
+    max-width:240px;
+    text-align:left;
+}
+.business-name .mat-button-wrapper{
+    display:flex;
+    flex:1;
+    padding:0.2em 0;
+    position:relative;
+    width:100%;
+}
+.business-name .badge{
+    background-color:#00E384;
+    border-radius:50%;
+    color:#fff;
+    display:inline-block;
+    font-size:0.9em;
+    line-height: 1.2em;
+    margin-right:1em;
+    padding:8px 7px;
+    text-align:center;
+}
+
+.toolbar-item {
+    align-items: center;
+    display:flex;
+    border-right:1px solid #ddd;
+    font-weight:normal;
+    height:2em;
+    padding:0 1.5em;
+}
+.toolbar-item *{
+    font-weight:normal;
+}
+.dashboard-toolbar .toolbar-item:last-child {
+    border-right:0!important;
+}
+
+.toolbar-time{
+    color:#777;
+    font-size:0.9em;
 }
 
 .dashboard-container{
@@ -16,14 +66,71 @@
 }
 
 .dashboard-sidebar {
+    background-color: #FAFAFA;
+    padding:1em;
     width:240px;
 }
 
-.menu-tree-invisible{
+.mat-drawer-side{
+    border-color:#eee;
+}
+
+.get-started{
+    color:#222;
+    padding:0.5em 0 1em;
+}
+.get-started .mat-icon {
+    margin-right:0.6em;
+    position:relative;
+    top:5px;
+}
+
+.tree-label{
+    color:#777;
+    font-size:0.8em;
+    letter-spacing:2px;
+    padding:1em 0;
+    text-transform: uppercase;
+}
+
+.mat-tree{
+    background:transparent;
+}
+.mat-tree-node{
+    color:#797979;
+    display:block;
+    font-size:0.95em;
+    line-height:1em;
+    min-height:40px;
+}
+.mat-nested-tree-node .mat-subtree {
+    padding-left: 3em!important;
+}
+.mat-nested-tree-node[aria-expanded=true] > .mat-tree-node {
+    color:#000;
+}
+.mat-tree-node .mat-icon {
+    color:#555;
+    font-size:1.5em;
+    padding-right:0.6em;
+    position:relative;
+    top:4px;
+}
+.mat-nested-tree-node .mat-focus-indicator {
+    float: right;
+    position: relative;
+    top:-10px;
+}
+.mat-nested-tree-node .mat-nested-tree-node .mat-focus-indicator{
+    position: relative;
+    top:-15px;
+}
+.menu-tree-invisible {
     display: none;
 }
 
 .dashboard-content{
+    margin-top:5%;
     padding:1em;
 }
 
@@ -47,6 +154,25 @@
 }
 .summary-grid .mat-grid-tile:last-child .summary-card{
     max-width:100%;
+}
+.summary-card .mat-card-content{
+    font-size:1.2em;
+}
+.card-payment .mat-card-subtitle,
+.card-payment .mat-icon {
+    color:#30A1F2;
+}
+.card-charge .mat-card-subtitle,
+.card-charge .mat-icon {
+    color: #00E581;
+}
+.card-acceptance .mat-card-subtitle,
+.card-acceptance .mat-icon {
+    color: #FFB700;
+}
+.card-success .mat-card-subtitle,
+.card-success .mat-icon {
+    color: #E52E00;
 }
 
 .graph-card{
