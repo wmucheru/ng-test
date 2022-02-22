@@ -27,6 +27,28 @@
     padding:1em;
 }
 
+.summary-grid{
+    padding-bottom: calc(1 * ((20% - 0.75px) * 1) + 0px + 0px)!important;
+}
+
+.summary-grid .mat-grid-tile {
+    padding-top: calc((20% - 0.75px) * 1 + 0px)!important;
+}
+
+.summary-grid .mat-grid-tile-content {
+    align-items: flex-start;
+    justify-content: space-between;
+    /* right:1em!important; */
+}
+
+.summary-card{
+    max-width:80%;
+    width:100%;
+}
+.summary-grid .mat-grid-tile:last-child .summary-card{
+    max-width:100%;
+}
+
 .graph-card{
     margin-bottom:2em;
 }
