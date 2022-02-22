@@ -18,7 +18,8 @@ export class AppComponent {
         // 'colvis',
         'copy',
         'print',
-        'excel'
+        'excel',
+        'csv'
       ]
     }
   }
