@@ -81,61 +81,81 @@
     </mat-sidenav>
 
     <mat-sidenav-content class="dashboard-content">
-        <mat-grid-list cols="12">
-            <mat-grid-tile colspan="5">
-                <h1>Payment Methods Dashboard</h1>
-            </mat-grid-tile>
+        <div class="row dashboard-row filter-row">
+            <div class="col-sm-5">
+                <h1 class="page-title">Payment Methods Dashboard</h1>
+            </div>
 
-            <mat-grid-tile colspan="3">
-                <span>Select Payment Method</span>
-            </mat-grid-tile>
+            <div class="col-sm-3 filter-box">
+                <div>Select Payment Method</div>
+                <div class="payment-method">
+                    <span class="filter-chip">
+                        Airtel <mat-icon>close</mat-icon>
+                    </span>
+                    <span class="filter-chip">
+                        Mpesa <mat-icon>close</mat-icon>
+                    </span>
+                    <span class="filter-chip">
+                        DTB <mat-icon>close</mat-icon>
+                    </span>
+                    <mat-icon class="filter-dropdown">expand_more</mat-icon>
+                </div>
+            </div>
 
-            <mat-grid-tile colspan="2">
-                <span>From</span>
-            </mat-grid-tile>
+            <div class="col-sm-2 filter-box">
+                <div>From</div>
+                <div class="daterange-widget">
+                    <mat-icon>date_range</mat-icon>
+                    May 18 - May 24
+                </div>
+            </div>
 
-            <mat-grid-tile colspan="2">
-                <span>To</span>
-            </mat-grid-tile>
-        </mat-grid-list>
+            <div class="col-sm-2 filter-box">
+                <div>To</div>
+                <div class="daterange-widget">
+                    <mat-icon>date_range</mat-icon>
+                    May 18 - May 24
+                </div>
+            </div>
+        </div>
 
-        <mat-grid-list cols="4" class="summary-grid">
-            <mat-grid-tile>
+        <div class="row dashboard-row summary-row">
+            <div class="col-sm-3">
                 <mat-card class="summary-card card-payment">
                     <mat-card-subtitle>
                         <mat-icon>pie_chart</mat-icon> Total Payment Request
                     </mat-card-subtitle>
                     <mat-card-content>1,000</mat-card-content>
                 </mat-card>
-            </mat-grid-tile>
+            </div>
 
-            <mat-grid-tile>
+            <div class="col-sm-3">
                 <mat-card class="summary-card card-charge">
                     <mat-card-subtitle>
                         <mat-icon>pending_actions</mat-icon> Total Charge Requests
                     </mat-card-subtitle>
                     <mat-card-content>1,000</mat-card-content>
                 </mat-card>
-            </mat-grid-tile>
+            </div>
 
-            <mat-grid-tile>
+            <div class="col-sm-3">
                 <mat-card class="summary-card card-acceptance">
                     <mat-card-subtitle>
                         <mat-icon>verified</mat-icon> Acceptance Rate
                     </mat-card-subtitle>
                     <mat-card-content>10%</mat-card-content>
                 </mat-card>
-            </mat-grid-tile>
+            </div>
 
-            <mat-grid-tile>
+            <div class="col-sm-3">
                 <mat-card class="summary-card card-success">
                     <mat-card-subtitle>
                         <mat-icon>pending_actions</mat-icon> Success Rate
                     </mat-card-subtitle>
                     <mat-card-content>20</mat-card-content>
                 </mat-card>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </div>
+        </div>
 
         <mat-card class="graph-card">
             <mat-card-title>Acceptance Rate Trend</mat-card-title>

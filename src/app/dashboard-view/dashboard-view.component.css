@@ -25,7 +25,7 @@
     width:100%;
 }
 .business-name .badge{
-    background-color:#00E384;
+    background-color:#00E581;
     border-radius:50%;
     color:#fff;
     display:inline-block;
@@ -130,34 +130,88 @@
 }
 
 .dashboard-content{
-    margin-top:5%;
+    margin-top:3%;
+    max-width:1200px;
     padding:1em;
 }
 
-.summary-grid{
-    padding-bottom: calc(1 * ((20% - 0.75px) * 1) + 0px + 0px)!important;
+.dashboard-row{
+    margin-bottom:2em;
 }
 
-.summary-grid .mat-grid-tile {
-    padding-top: calc((20% - 0.75px) * 1 + 0px)!important;
+.page-title{
+    position:relative;
+    top:1em;
 }
 
-.summary-grid .mat-grid-tile-content {
-    align-items: flex-start;
-    justify-content: space-between;
-    /* right:1em!important; */
+.filter-box{
+    color:#555;
+}
+.filter-box > div:first-child{
+    font-size:0.9em;
+    padding-bottom:0.5em;
+}
+
+.payment-method{
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:4px;
+    padding:0.4em;
+    position:relative;
+}
+.filter-chip{
+    background:#eee;
+    border-radius:4px;
+    display:inline-block;
+    font-size:0.9em;
+    margin-right:5px;
+    padding:0.2em 0.8em;
+    padding-right:2em;
+    position:relative;
+}
+.filter-chip .mat-icon{
+    font-size:1.2em;
+    position:absolute;
+    top:0.3em;
+    bottom:0;
+    right:0;
+}
+.filter-dropdown{
+    color:#00E581;
+    position:absolute;
+    right:0.4em;
+}
+
+.daterange-widget{
+    background-color:#fff;
+    border-radius:5px;
+    box-shadow:0 3px 6px rgba(0,0,0,0.2);
+    font-size:0.9em;
+    padding:0.5em;
+    padding-left:3em;
+    position:relative;
+}
+.daterange-widget .mat-icon{
+    font-size:1.5em;
+    position:absolute;
+    left:0.5em;
+    top:0.3em;
+    bottom:0;
+    margin:auto;
 }
 
 .summary-card{
-    max-width:80%;
     width:100%;
-}
-.summary-grid .mat-grid-tile:last-child .summary-card{
-    max-width:100%;
 }
 .summary-card .mat-card-content{
     font-size:1.2em;
 }
+.summary-card .mat-icon {
+    margin-right:10px;
+    position:relative;
+    top:6px;
+}
+
 .card-payment .mat-card-subtitle,
 .card-payment .mat-icon {
     color:#30A1F2;
@@ -177,4 +231,8 @@
 
 .graph-card{
     margin-bottom:2em;
+}
+
+.mat-card-title{
+    font-size:1.4em;
 }
