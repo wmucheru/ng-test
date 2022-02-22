@@ -11,12 +11,16 @@ import { MatCardModule } from '@angular/material/card';
 
 import { DataTablesModule } from "angular-datatables";
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { TableViewComponent } from './table-view/table-view.component';
+import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    TableViewComponent,
+    DashboardViewComponent
   ],
   imports: [
     BrowserModule,
