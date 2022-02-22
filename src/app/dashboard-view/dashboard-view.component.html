@@ -78,6 +78,19 @@
                 </div>
             </mat-nested-tree-node>
         </mat-tree>
+
+        <div class="tree-label">COLLECT</div>
+
+        <div role="tree" class="mat-tree cdk-tree menu-tree ng-tns-c104-3">
+            <div mattreenodetoggle="" class="mat-tree-node cdk-tree-node" role="treeitem" aria-level="1">
+                <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color">store</mat-icon>
+                In-Store 
+            </div>
+            <div mattreenodetoggle="" class="mat-tree-node cdk-tree-node" role="treeitem" aria-level="1">
+                <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color">local_grocery_store</mat-icon>
+                Online 
+            </div>
+        </div>
     </mat-sidenav>
 
     <mat-sidenav-content class="dashboard-content">
@@ -157,17 +170,41 @@
             </div>
         </div>
 
-        <mat-card class="graph-card">
-            <mat-card-title>Acceptance Rate Trend</mat-card-title>
+        <mat-card class="chart-card">
             <mat-card-content>
-                GRAPH
+                <div class="row">
+                    <div class="col-sm-8 mat-card-title">Acceptance Rate Trend</div>
+                    <div class="col-sm-4">
+                        <div class="daterange-widget" style="float:right;">
+                            <mat-icon>date_range</mat-icon>
+                            Oct - Nov 2021
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix chart-container">
+                    <canvas baseChart
+                        [data]="lineChartData"
+                        [options]="lineChartOptions"
+                        [type]="lineChartType"></canvas>
+                </div>
             </mat-card-content>
         </mat-card>
 
         <mat-card class="graph-card">
-            <mat-card-title>Success Rate Trend</mat-card-title>
             <mat-card-content>
-                GRAPH
+                <div class="row">
+                    <div class="col-sm-8 mat-card-title">Success Rate Trend</div>
+                    <div class="col-sm-4">
+                        <div class="daterange-widget" style="float:right;">
+                            <mat-icon>date_range</mat-icon>
+                            Oct - Nov 2021
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-empty">
+                    No data available
+                </div>
             </mat-card-content>
         </mat-card>
 

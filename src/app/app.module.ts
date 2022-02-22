@@ -21,6 +21,7 @@ import { DataTablesModule } from "angular-datatables";
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { TableViewComponent } from './table-view/table-view.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { DashboardViewComponent } from './dashboard-view/dashboard-view.componen
     MatSlideToggleModule,
     MatMenuModule,
     MatIconModule,
-    MatTreeModule
+    MatTreeModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
