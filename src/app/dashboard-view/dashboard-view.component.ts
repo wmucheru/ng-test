@@ -4,72 +4,7 @@ import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { ChartConfiguration, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 
-interface MenuNode {
-  name: string,
-  children?: MenuNode[],
-  icon?: string
-}
-
-const MENU_TREE: MenuNode[] = [
-  {
-    name: 'Dashboard',
-    icon: 'home'
-  },
-  {
-    name: 'Transactions',
-    icon: 'swap_horizontal_circle',
-    children: [
-      {
-        name: 'Charge',
-        children: [
-          {
-            name: 'Dashboard'
-          },
-          {
-            name: 'Payment Requests'
-          },
-          {
-            name: 'Charge Requests'
-          },
-          {
-            name: 'Manage Paybills & Accounts'
-          },
-          {
-            name: 'Manage Payment Methods'
-          }
-        ]
-      },
-      {
-        name: 'Refund'
-      },
-      {
-        name: 'Reconcile'
-      },
-      {
-        name: 'Balance'
-      },
-      {
-        name: 'Forex'
-      }
-    ]
-  },
-  {
-    name: 'Payouts',
-    icon: 'autorenew'
-  },
-  {
-    name: 'Messaging',
-    icon: 'mark_chat_unread'
-  },
-  {
-    name: 'Customers',
-    icon: 'people_alt'
-  },
-  {
-    name: 'Onboarding',
-    icon: 'account_circle'
-  }
-];
+import { MenuNode, MENU_TREE } from './dashboard-menu';
 
 @Component({
   selector: 'app-dashboard-view',
@@ -79,17 +14,22 @@ const MENU_TREE: MenuNode[] = [
 export class DashboardViewComponent implements OnInit {
   treeControl = new NestedTreeControl<MenuNode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<MenuNode>();
-  
 
-  constructor() { }
+  constructor() {
+    this.dataSource.data = MENU_TREE;
+  }
 
   ngOnInit(): void {
-    this.dataSource.data = MENU_TREE;
-    console.log(this.treeControl);
+
   }
 
   hasChild = (_: number, node: MenuNode) => !!node.children && node.children.length > 0;
 
+  /**
+   * 
+   * Chart creation
+   * 
+  */
   public lineChartData: ChartConfiguration['data'] = {
     datasets: [
       {

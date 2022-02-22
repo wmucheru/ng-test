@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -18,7 +17,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTreeModule } from '@angular/material/tree';
 
 import { DataTablesModule } from "angular-datatables";
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { TableViewComponent } from './table-view/table-view.component';
 import { DashboardViewComponent } from './dashboard-view/dashboard-view.component';
 import { NgChartsModule } from 'ng2-charts';
@@ -26,8 +24,6 @@ import { NgChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
     TableViewComponent,
     DashboardViewComponent,
   ],
